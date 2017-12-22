@@ -32,7 +32,7 @@ public class GetFile  implements CommandLineRunner {
         String data= JSON.toJSONString(sqllists);
         File file = new File("e:/shengxun/sender");
         try {
-            WriteFile.writeFile("e:/shengxun/sender/"+"type2"+UUIDGenerator.getUUID()+".json",data);
+            WriteFile.writeFile("e:/shengxun/sender/"+UUIDGenerator.getUUID()+".json",data);
             System.out.println("上传成功!"+new Date());
         } catch (IOException e) {
             e.printStackTrace();
